@@ -1,0 +1,19 @@
+{
+    "name":"miniframework",
+    "require":{
+        "php":">= 7.0"
+    },
+    "authors": [
+        {  
+            "name": "Cleiton Aparecido Bueno Fonseca",
+            "email": "Cleiton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\":"App/",
+            "MF\\":"vendor/MF/"
+        }
+    }
+
+}
