@@ -5,16 +5,15 @@ namespace MF\Init;
 // criando uma classe abstrata para, para ser herdada, mas não instanciada. Para fornecer oque fazer com as rotas recebidas   
 abstract class Bootstrap
 {
-
     private $routes;
 
+    // Metodo obrigatorio para a classe abstrata funcionar, e chama o initRoutes da classe routes
     abstract protected function initRoutes();
 
     public function __construct()
     {
-        // variavel com as route
+        // chama o metodo initRoutes que é citado no arquivo route.php, para coletar todas as todas configuradas, salva no atributo $routes, pelo metodo setRoutes       
         $this->initRoutes();
-
         $this->run($this->getUrl());
     }
     public function getRoutes()
@@ -47,7 +46,6 @@ abstract class Bootstrap
     //definindo route de acesso
     protected function getUrl()
     {
-
         // PHP_URL_PATH -> FILTRA PARA RETORNAR SOMENTE A ROUTE
         // PHP_URL_SCHEME
         // PHP_URL_USER
@@ -56,7 +54,6 @@ abstract class Bootstrap
         // PHP_URL_PORT
         // PHP_URL_QUERY
         // PHP_URL_FRAGMENT
-
         return parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     }
 }

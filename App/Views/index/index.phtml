@@ -1,0 +1,11 @@
+<h1>Index</h1>
+<hr />
+
+<?php
+
+
+foreach ($this->view->dados as $indice => $moveis) { ?>
+    <h4><?=$moveis['descricao']?></h4>
+    <p><?=$moveis['preco']?></p>
+
+<?php } ?>

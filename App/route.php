@@ -3,7 +3,7 @@ namespace App;
 // bootstrap fica salvo os tratamente das rotas
 use MF\Init\Bootstrap;
 
-
+//como chama a classe abstract Bootstrap, executa o metodo __contruct da classe bootstrap
 class route extends Bootstrap {
     
     protected function initRoutes(){
